@@ -81,4 +81,13 @@ test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
-a = 0
+
+#edge case: first index
+test_function([[6, 7, 8, 1, 2, 3, 4], 6])
+#edge case: last index
+test_function([[6, 7, 8, 1, 2, 3, 4], 4])
+#edge case: no wrapping looking for first
+test_function([[ 1, 2, 3, 4, 5, 6], 1])
+
+#edge case: no wrapping looking for last
+test_function([[ 1, 2, 3, 4, 5, 6], 6])

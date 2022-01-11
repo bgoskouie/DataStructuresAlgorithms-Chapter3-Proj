@@ -206,3 +206,8 @@ router.lookup("/home/about") # should print 'about handler'
 router.lookup("/home/about/") # should print 'about handler' or None if you did not handle trailing slashes
 router.lookup("/home/about/me") # should print 'not found handler' or None if you did not implement one
 
+# Edge case empty path:
+router.lookup("")
+
+# Edge case: first part only:
+router.lookup("/home/")

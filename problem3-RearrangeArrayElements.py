@@ -6,7 +6,8 @@
 
 # for e.g. [1, 2, 3, 4, 5]
 
-# The expected answer would be [531, 42]. Another expected answer can be [542, 31]. In scenarios such as these when there are more than one possible answers, return any one.
+# The expected answer would be [531, 42]. Another expected answer can be [542, 31].
+# In scenarios such as these when there are more than one possible answers, return any one.
 
 # Here is some boilerplate code and test cases to start with:
 
@@ -92,4 +93,11 @@ print(sorted_list)
 
 test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
+test_function(test_case)
+
+#edge case empty list:
+test_case = [[], []]
+test_function(test_case)
+#edge case largest numbers equal:
+test_case = [[4, 6, 2, 5, 9, 9], [964, 952]]
 test_function(test_case)

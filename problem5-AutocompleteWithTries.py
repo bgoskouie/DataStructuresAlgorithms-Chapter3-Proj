@@ -128,7 +128,20 @@ for word in wordList:
 node1, found1, fg1 = MyTrie.find("triggerss")
 node2, found2, fg2 = MyTrie.find("trigger")
 node3, found3, fg3 = MyTrie.find("trigg")
+
+out = MyTrie.root.suffixes("fun")
+print(out)
+out = MyTrie.root.suffixes("function")
+print(out)
+out = MyTrie.root.suffixes("factory")
+print(out)
+
+# edge case 1:  whole word, not having any word larger than this
 out = MyTrie.root.suffixes("ant")
+print(out)
+
+# edge case 2:  whole word, not having any word smaller than this
+out = MyTrie.root.suffixes("antagonist")
 print(out)
 
 from ipywidgets import widgets

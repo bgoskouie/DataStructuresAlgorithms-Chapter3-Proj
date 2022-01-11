@@ -33,5 +33,10 @@ random.shuffle(l)
 
 print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
 
+# edge case all numbers being the same
+print ("Pass" if ((9, 9) == get_min_max(5 * [9])) else "Fail")
+
+#edge case empty list
+print ("Pass" if ((None, None) == get_min_max([])) else "Fail")
 
 
