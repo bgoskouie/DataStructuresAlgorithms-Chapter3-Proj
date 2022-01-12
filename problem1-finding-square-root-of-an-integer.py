@@ -19,6 +19,8 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
     """
+    if number < 0:
+        return None
     return sqrt_recur(number, 0, number)
 
 def sqrt_recur(number, start, stop):
@@ -43,6 +45,8 @@ def sqrt_recur(number, start, stop):
 print ("Pass" if  (3 == sqrt(9)) else "Fail")
 # edge case: 0
 print ("Pass" if  (0 == sqrt(0)) else "Fail")
+# edge case: 1
+print ("Pass" if  (None == sqrt(-1)) else "Fail")
 # edge case: n ** 2
 print ("Pass" if  (4 == sqrt(16)) else "Fail")
 # edge case: n ** 2

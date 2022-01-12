@@ -136,6 +136,10 @@ print(out)
 out = MyTrie.root.suffixes("factory")
 print(out)
 
+# edge case 0:  empty string
+out = MyTrie.root.suffixes("")
+print(out)  # autocomplete should show everything!
+
 # edge case 1:  whole word, not having any word larger than this
 out = MyTrie.root.suffixes("ant")
 print(out)

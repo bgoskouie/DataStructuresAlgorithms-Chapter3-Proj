@@ -22,6 +22,8 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
+    if number is None:
+        return -1
     return search_recur(input_list, 0, len(input_list) - 1, number)
 
 def search_recur(input_list, start, stop, number):
@@ -82,6 +84,8 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
 
+#edge case: empty array
+test_function([[], None])
 #edge case: first index
 test_function([[6, 7, 8, 1, 2, 3, 4], 6])
 #edge case: last index
